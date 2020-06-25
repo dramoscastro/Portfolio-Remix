@@ -5,8 +5,9 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// connecting back to front
+// connecting back to front and styles
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 
 //route home
 app.get("/", function (req, res) {
